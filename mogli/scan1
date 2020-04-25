@@ -23,7 +23,7 @@ iwconfig
 airodump-ng wlan1mon # (or mon1) list access points
 
 besside-ng wlan1mon
-#Stop monitor status and  return to manger  status
+#      Stop monitor status and  return to manger  status
 airmon-ng stop wlan1mon
 service networking restart
 service network-manager restart
