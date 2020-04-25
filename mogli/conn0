@@ -1,0 +1,12 @@
+ echo 'Connectingto Wi-Fi hotspot viaTerminal'
+
+
+ echo 'Kill network-manager'
+ killall wpa_supplicant
+ echo ' Kill network-manager'
+ service network-manager stop 
+ echo 'create configuration file'
+ wpa_passphrase amzaleg 10203040 > wpa.conf  Create configuration file 'wpa.conf'
+ echo 'connect to wlan0' 
+ wpa_supplicant -D nl80211 -i wlan0 -c wpa.conf
+    

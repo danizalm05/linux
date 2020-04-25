@@ -1,0 +1,32 @@
+#wifite  -showb  #show all spots
+
+#Airgeddon  
+
+
+echo "iwconfig"
+iwconfig
+
+echo "airmon-ng check List of processes that could cause trouble"
+echo "-------------------------------------------"
+airmon-ng check #List of processes that could cause trouble
+echo "-------------------------------------------"
+echo "airmon-ng check kill"
+echo "-------------------------------------------"
+airmon-ng check kill #List of processes that could cause trouble
+echo "-------------------------------------------"
+echo "a airmon-ng start wlan1"
+echo "-------------------------------------------"
+airmon-ng start wlan1 # Start monitoring wlan0
+
+ 
+iwconfig
+#airodump-ng wlan1mon # (or mon0) list access points
+airodump-ng wlan1mon -w test_data_capture
+besside-ng wlan1mon
+#Stop monitor status and  return to manger  status
+airmon-ng stop wlan1mon
+service networking restart
+service network-manager restart
+ifconfig
+
+
