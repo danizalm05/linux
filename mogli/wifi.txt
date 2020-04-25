@@ -5,14 +5,12 @@ ifconfig
 
 Setting up Wireless Adapter
 -----------------
-
- 
  iwlist wlan0 scan: Scan the air for available access points
  iwlist wlan0 scan | grep ESSID: filter the output to show ESSID
  iwlist wlan0 scan | grep -i "essid\| channel:" :filter the output to show ESSID and channel
  iwlist wlan0 scan | grep -i --color "essid\| channel:\|quality\|address":
-   ESSID:Extended basic Service Set IDentifier, also called as Access point name
-
+   ESSID: Extended basic Service Set IDentifier, also called as Access point name
+   BSSID: Basic Service Set IDentifier: MAC/Physicaladdress of AP
 restart wifi
 1 service networking restart
 2 service network-manager restart
@@ -20,16 +18,25 @@ restart wifi
 
          Connecting to Wi-Fi hotspot viaTerminal
          ------------------------------------------
- 1. service network-manager stop: Kill network-manager 
+ service network-manager stop: Kill network-manager 
  wpa_passphrase:  Connecting to Wi-Fi hotspot viaTerminal
- 2. wpa_passphrase [ssid] [passward] > wpa.conf:  Create configuration file 'wpa.conf'
+ wpa_passphrase [ssid] [passward] > wpa.conf:  Create configuration file 'wpa.conf'
   
 
  wpa_supplicant: Stock utility to associate the wireless cards with access points from terminal
- 3.wpa_supplicant -D nl80211 -i wlan0 -c wpa.conf
+ wpa_supplicant -D nl80211 -i wlan0 -c wpa.conf
     -D nl80211: Wireless drivers to carry the authentication/association process.
     -i wlan0: Wireless interface to use. 
     -c wpa.conf:Configuration file created with wpa_passphrase  utility.
 
+Example file to connect to wifi from wlan0 (conn0):
 
- 
+    echo 'Connecting to Wi-Fi hotspot viaTerminal'
+    echo 'Kill network-manager'
+    killall wpa_supplicant
+    echo ' Kill network-manager'
+    service network-manager stop 
+    echo 'create configuration file'
+    wpa_passphrase amzaleg 10203040 > wpa.conf  Create configuration file 'wpa.conf'
+    echo 'connect to wlan0' 
+    wpa_supplicant -D nl80211 -i wlan0 -c wpa.conf
