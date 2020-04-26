@@ -1,4 +1,4 @@
- echo 'Connectingto Wi-Fi hotspot viaTerminal'
+ echo 'Connectingto Wi-Fi hotspot via  Terminal'
 
 
  echo 'Kill network-manager'
