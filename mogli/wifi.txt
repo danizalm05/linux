@@ -3,6 +3,16 @@ Kali Wireless Security.pdf
 iwconfig
 ifconfig
 
+
+find ip
+---------------
+ipconfig: find ip public/private in win 10
+hostname -I
+ip addr: Show private  ip 
+ip a s | grep -w inet | awk '{ print $2}': Find privte IP
+
+
+
 Setting up Wireless Adapter
 -----------------
  iwlist wlan0 scan: Scan the air for available access points

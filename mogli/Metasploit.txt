@@ -1,0 +1,88 @@
+ Metasploit  modules;
+   (1) exploits
+   (2) payloads
+   (3) auxiliary
+   (4) nops 
+   (5) post
+   (6) encoders
+   (7) evasion (new in Metasploit 5)
+
+options (variables).
+
+
+  RHOST - this is the remote host or target IP
+  LHOST - this is the local host or attacker IP
+  RPORT - this is the remote port or target port
+  LPORT - this is the local port or attacker port
+     
+metasploit-framework package and is installed in the /usr/share/metasploit-framework 
+use auxiliary/scanner/portscan/tcp
+show  options
+
+set RHOSTS  192.168.1.100
+set PORTS 1-1000
+run
+
+
+Getting Started
+
+kali > service postgresql start
+kali >msfconsole
+
+
+msf > use exploit/windows/browser/adobe_flash_avm2 :Loads a module
+msf > show payloads: list all the payloads that are compatible with this exploit
+msf > show options: options that need to set before running the module
+msf > show targets  
+
+msf > info: info of  exploit
+
+msf > search
+msf > search type:exploit platform:windows flash:  exploit (type) for Windows (platform) for Abobe Flash
+msf > set SRVPORT 80: default SVRPORT (server port) from 8080 to 80
+msf > unset SRVPORT: unsets the option
+
+msf > exploit: sends the exploit to the target system and, if successful, installs the payload
+
+msf > back: take us "back" one step in our process
+msf > exit
+
+https://www.hackers-arise.com/post/2017/01/30/metasploit-part-2-metasploit-module-types
+https://www.hackers-arise.com/post/2017/02/06/metasploit-basics-part-3-payloads
+msf >  show  payloads
+
+ Types of Payloads​:
+  1 Inline​
+  2 Staged​
+  3 Meterpreter​
+  4 PassiveX​
+  5 NoNX​
+  6 IPv6​
+  7 Reflective DLL Injection​
+
+ payloads directory: /usr/share/metasploit-framework/modules/payloads
+
+https://www.hackers-arise.com/post/2017/03/29/metasploit-basics-part-4-connecting-and-using-the-postgresql-database-with-metasploit
+  how to connect the postgresql database to Metasploit
+ kali > service postgresql start:  Start the postgresql database
+ kali > service postgresql status: Check on the status of our database
+ kali > msfdb status: checking status of the database( more detailed information).
+ kali > msfdb init: initialize the database
+ kali > msfconsole: start Metasploit
+
+Working with Workspaces
+ msf > workspace: view the workspace 
+ msf > workspace -a hackersarise: add a new workspace named 'hackersarise'
+ 
+  ip a s | grep -w inet | awk '{ print $2}': Find privte IP
+ msf5 >  db_nmap  -A 10.0.2.15/24:  scan  local network  saves the IP addresses  in database
+ msf5 > hosts -c address,mac,os_name,purpose: Output hosts information
+ msf5 > services: services running on our target system
+ msf5 > db_export -f xml /root/hackersarise.xml: export database  to  a file
+ msf5 > su postgres: Enter the postgresql database
+ postgres @kali > exit: Return to the Metasploit console  
+ msf5 > db_disconnect: Disconnect the existing database
+
+https://www.hackers-arise.com/post/2017/04/10/metasploit-basics-part-5-using-metasploit-for-reconnaissance
+ 
+
