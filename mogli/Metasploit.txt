@@ -84,5 +84,25 @@ Working with Workspaces
  msf5 > db_disconnect: Disconnect the existing database
 
 https://www.hackers-arise.com/post/2017/04/10/metasploit-basics-part-5-using-metasploit-for-reconnaissance
+ https://www.hackers-arise.com/post/2017/04/10/metasploit-basics-part-5-using-metasploit-for-reconnaissance
  
+ 
+kali > msfconsole: fire up Kali 
+msf >  nmap -sT 10.0.2.15/24 -p1-1000: Scan machines in internal network return  open ports list.
+msf > db_nmap 10.0.2.15/24: Scan our targets with db_nmap.
+
+
+Example: Determine whether a Windows 7/Server 2008 system is vulnerable
+ to this exploit, there is a scanner in Metasploit to determine as such. 
+load that scanner into our framework and run it against a Windows 7 system
+
+msf5 > use auxiliary/scanner/smb/smb_ms17_010
+msf5 auxiliary(scanner/smb/smb_ms17_010) >  set RHOSTS 192.168.56.1
+RHOSTS => 192.168.56.1
+msf5 auxiliary(scanner/smb/smb_ms17_010) > run
+
+results:
+[-] 192.168.56.1:445      - Host does NOT appear vulnerable.
+[*] 192.168.56.1:445      - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
 
