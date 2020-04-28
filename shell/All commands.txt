@@ -1,4 +1,4 @@
-All commands (A-Z) for Kali Linux here:
+ 
 a
 
 apropos Search Help manual pages (man -k)
@@ -9,7 +9,12 @@ apt-get --purge remove gimp : uninstalls gimp and deletes all the configuration 
 aptitude Search for and install software packages (Debian/Ubuntu)
 aspell Spell Checker
 awk Find and Replace text, database sort/validate/index
+
+
+
 b
+base64
+base64 -d <file name> : decodes base64 encoded file  
 
 basename Strip directory and suffix from filenames
 bash GNU Bourne-Again SHell
@@ -17,12 +22,21 @@ bc Arbitrary precision calculator language
 bg Send to background
 break Exit from a loop •
 builtin Run a shell builtin
-bzip2 Compress or decompress named file(s)
+bzip2: compressed data 
+ bzip2 -d data: Decompress   file
+
+ 
 c
 
 cal Display a calendar
 case Conditionally perform a command
 cat Concatenate and print (display) the content of files
+ cat ./- : out a file called ‘- ’
+ cat "spaces in this filename":  output a file called “spaces in this filename” 
+ cat .inhere :output  a hidden file name “nihere”
+
+
+
 cd Change Directory
 cfdisk Partition table manipulator for Linux
 chgrp Change group ownership
@@ -36,7 +50,9 @@ cmp Compare two files
 comm Compare two sorted files line by line
 command Run a command - ignoring shell functions •
 continue Resume the next iteration of a loop •
-cp Copy one or more files to another location
+cp: Copy one or more files to another location
+ cp data.txt /tmp/yourname
+
 cron Daemon to execute scheduled commands
 crontab Schedule a command to run at a later time
 csplit Split a file into context-determined pieces
@@ -88,8 +104,14 @@ fdformat Low-level format a floppy disk
 fdisk Partition table manipulator for Linux
 fg Send job to foreground
 fgrep Search file(s) for lines that match a fixed string
-file Determine file type
-find Search for files that meet a desired criteria
+file: Determine file type
+  file ./*  : Show type of all  files in this directory
+find: Search for files that meet a desired criteria
+ find
+ find ./ -size 1033c ! -executable:    find a file somewhere under the inhere directory and has  all  of the   following  properties:  
+     human-readable   • 1033 bytes in size  • not executable
+ find / -type f -user bandit7 -group bandit6 -size 33c :   find a file tored somewhere on the server and has all of the following properties:
+    owned by user bandit7   owned by group bandit6  33 bytes in size
 fmt Reformat paragraph text
 fold Wrap text to fit a specified width.
 for Expand words, and execute commands
@@ -99,16 +121,27 @@ fsck File system consistency check and repair
 ftp File Transfer Protocol
 function Define Function Macros
 fuser Identify/kill the process that is accessing a file
+
 g
+
 gawk Find and Replace text within file(s)
 getopts Parse positional parameters
-grep Search file(s) for lines that match a given pattern
+grep: Search file(s) for lines that match a given pattern
+  grep "millionth"  data.txt:  find the line in file data.txt next to the word millionth
+
+
+
+
 groupadd Add a user security group
 groupdel Delete a group
 groupmod Modify a group
 groups Print group names a user is in
-gzip Compress or decompress named file(s)
+gzip: Compress or decompress named file(s)
+ gzip -d data.gz: Decompress file
+
+
 h
+
 hash Remember the full pathname of a name argument
 head Output the first part of file(s)
 help Display help for a built-in command •
@@ -154,6 +187,7 @@ m
 make Recompile a group of programs
 man Help manual
 mkdir Create new folder(s)
+  mkdir /tmp/yourname 
 mkfifo Make FIFOs (named pipes)
 mkisofs Create an hybrid ISO9660/JOLIET/HFS filesystem
 mknod Make block or character special files
@@ -163,8 +197,20 @@ mtools Manipulate MS-DOS files
 mtr Network diagnostics (traceroute/ping)
 mv Move or rename files or directories
 mmv Mass Move and rename (files)
+
 n
+
+
+nc(ncat):   similar to cat command but for network.  
+ nc -l localhost -p 5000: The netcat server is listening to port 5000.
+ ncat 192.168.1.100 80:  connect to a remote system port 80
+ nc -v localhost 5000: establishes connection to the server on port 5000.(-v verbose)
+ nc -l localhost -p 12345 < /etc/bandit_pass/bandit20: Listen  and use conntend of file
+ ncat 192.168.1.100 8080 --send-only < data.txt:send file
+
 netstat Networking information
+
+
 nice Set the priority of a command or job
 nl Number lines and write files
 nohup Run a command immune to hangups
@@ -206,7 +252,9 @@ rev Reverse lines of a file
 rm Remove files
 rmdir Remove folder(s)
 rsync Remote file copy (Synchronize file trees)
+
 s
+
 screen Multiplex terminal, run remote shells via ssh
 scp Secure copy (remote file copy)
 sdiff Merge two files interactively
@@ -220,20 +268,44 @@ shopt Shell Options
 shutdown Shutdown or restart linux
 sleep Delay for a specified time
 slocate Find files
-sort Sort text files
+sort: Sort text files
+  sort data.txt | uniq -c  : line of text that occurs only once 
+
+
 source Run commands from a file `.'
 split Split a file into fixed-size pieces
+
 ssh Secure Shell client (remote login program)
+ ssh://[user@]hostname[:port]
+ ssh  bandit0@bandit.labs.overthewire.org  -p 2220
+
+
+
 strace Trace system calls and signals
-su Substitute user identity
+strings:  print the strings of printable characters in files.
+ strings data.txt | grep '^=' : Find strings beginning with several ‘=’ characters.
+ 
+su: Substitute user identity
 sudo Execute a command as another user
 sum Print a checksum for a file
 suspend Suspend execution of this shell •
 symlink Make a new name for a file
 sync Synchronize data on disk with memory
+
 t
+
 tail Output the last part of file
-tar Tape ARchiver
+tar: Tape ARchiver
+ tar 
+ tar -xf data5.bin :Decompress  file   
+ 
+ 
+
+
+
+
+
+
 tee Redirect output to multiple files
 test Evaluate a conditional expression
 time Measure Program running time
@@ -242,7 +314,13 @@ touch Change file timestamps
 top List processes running on the system
 traceroute Trace Route to Host
 trap Run a command when a signal is set(bourne)
-tr Translate, squeeze, and/or delete characters
+tr: Translate, squeeze, and/or delete characters
+ cat greekfile | tr “[a-z]” “[A-Z]”: Translate lower to capital  letter
+ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m' :translate A to N B to M C to O ....
+ echo "Welcome To GeeksforGeeks" | tr [:space:] '\t': translate all the white-space to tabs
+ 
+ 
+
 true Do nothing, successfully
 tsort Topological sort
 tty Print filename of terminal on stdin
@@ -287,6 +365,10 @@ write Send a message to another user
 x
 xargs Execute utility, passing constructed argument list(s)
 xdg-open Open a file or URL in the user's preferred application.
+
+xxd: creates  a hex dump of a file 
+xxd test.txt: Output  hexdump to  console
+xxd -r data.txt data.out: Reverse from hex dump  to  original 
 yes Print a string until interrupted
 .:   Run a command script in the current shell
 !! Run the last command again
