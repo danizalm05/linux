@@ -3,7 +3,7 @@
 	b. Vim Commands
 	:help -     
 	1. i : insert mode
- 
+    
 	2. <ESC> : enter command mode
 		i.  w : Save / Don't Exit
 		ii. wq : Save / Quit
