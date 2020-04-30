@@ -8,10 +8,11 @@ find ip
 ---------------
 ipconfig: find ip public/private in win 10
 hostname -I
+ifconfig
 ip addr: Show private  ip 
 ip a s | grep -w inet | awk '{ print $2}': Find privte IP
 curl ifconfig.me
-hostname -I
+netdiscover
 
 
 Setting up Wireless Adapter
