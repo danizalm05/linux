@@ -1,0 +1,8 @@
+ # return to manger  status
+ 
+service networking restart
+service network-manager restart
+
+echo "networking restart" 
+ifconfig
+
