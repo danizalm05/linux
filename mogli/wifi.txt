@@ -1,8 +1,12 @@
 Kali Wireless Security.pdf
 
+ ESSID: Extended basic Service Set IDentifier, also called as Access point name
+ BSSID: Basic Service Set IDentifier: MAC/Physicaladdress of AP
+
+
 iwconfig
 ifconfig
-
+iwlist
 
 find ip
 ---------------
@@ -16,14 +20,14 @@ netdiscover
 
 
 Setting up Wireless Adapter
------------------
- iwlist wlan0 scan: Scan the air for available access points
- iwlist wlan0 scan | grep ESSID: filter the output to show ESSID
- iwlist wlan0 scan | grep -i "essid\| channel:" :filter the output to show ESSID and channel
+---------------------------
+ iwlist wlan0 scan:   Scan the air for available access points
+ iwlist wlan0 scan | grep ESSID:   filter the output to show ESSID
+ iwlist wlan0 scan | grep -i "essid\| channel:"   :filter the output to show ESSID and channel
  iwlist wlan0 scan | grep -i --color "essid\| channel:\|quality\|address":
-   ESSID: Extended basic Service Set IDentifier, also called as Access point name
-   BSSID: Basic Service Set IDentifier: MAC/Physicaladdress of AP
+  
 restart wifi
+-------------
 1 service networking restart
 2 service network-manager restart
 
