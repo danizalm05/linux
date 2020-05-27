@@ -555,7 +555,7 @@ color  1e: background black font=yellow
 		<rich_text>: List all  programs  installed
 </rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="hashcat" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1590569730.28" ts_lastsave="1590585893.47" unique_id="5">
+	<node custom_icon_id="0" foreground="" is_bold="False" name="hashcat" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1590569730.28" ts_lastsave="1590572104.87" unique_id="5">
 		<rich_text>
 </rich_text>
 		<rich_text scale="h3">Create a file dictionary with MBD5 hashes</rich_text>
@@ -577,13 +577,6 @@ The -n option removes  the new line added to the end of “Password.” This is 
 locate wordlists: Find location of the wordlist </rich_text>
 		<rich_text scale="small">file</rich_text>
 		<rich_text>
-locate rockyou.txt
-        /usr/share/wordlists/rockyou.txt.gz
-ls  /usr/share/wordlists
-dirb  dirbuster  fasttrack.txt  fern-wifi  metasploit  nmap.lst  rockyou.txt  wfuzz
-
-
-
 
 
 </rich_text>
@@ -594,44 +587,6 @@ dirb  dirbuster  fasttrack.txt  fern-wifi  metasploit  nmap.lst  rockyou.txt  wf
  options  
     -m :  hashtype (md5sum,)
      -a: attack mode
-     
-     
- </rich_text>
-		<rich_text scale="h3">Cracking the hashes:
- </rich_text>
-		<rich_text>$ hashcat -a “attack type” -m “hash type” -r “rules” -o “output file” hashes.txt wordlist.txt 
- Masks: 
- ?d = digit 
- ?l = lowercase letter 
- ?u = uppercase letter 
- ?s = symbol (inc space) 
- ?a = all of the above
- 
- 
- 
- 
- 
- 
- 
-In the final step, we can now start cracking the hashes contained in the target_hashes.txt file. We will use the following command line, as illustrated below:
- hashcat -m 0 -a 0 -o cracked.txt target_hashes.txt /usr/share/wordlists/rockyou.txt  </rich_text>
-		<rich_text family="monospace">-O</rich_text>
-		<rich_text>
- 
- The  -O  at the end of  the command line will increase the cracking speed, but will  limit the password length to  27
- 
- 
- 
-
-
-• -m 0 designates the type of hash we are cracking (MD5);
-• -a 0 designates a dictionary attack;
-• -o cracked.txt is the output file for the cracked passwords;
-• target_hashes.txt is our input file of hashes;
-• /usr/share/wordlists/rockyou.txt
- is the absolute path to the wordlist file for this dictionary attack.
-  
-     
 </rich_text>
 	</node>
 </cherrytree>
