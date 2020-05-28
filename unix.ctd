@@ -338,7 +338,7 @@ wlp4s0		Intel AC	iwlwifi - [phy0]
 			<rich_text link="webs https://overthewire.org">https://overthewire.org</rich_text>
 			<rich_text>
 </rich_text>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="Commands" prog_lang="custom-colors" readonly="False" tags="" ts_creation="0.0" ts_lastsave="1589043369.72" unique_id="21">
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Commands" prog_lang="custom-colors" readonly="False" tags="" ts_creation="0.0" ts_lastsave="1590666967.09" unique_id="21">
 				<rich_text> 
 </rich_text>
 				<rich_text underline="single" weight="heavy">ssh</rich_text>
@@ -477,6 +477,11 @@ sort data.txt | uniq -c  : line of text that occurs only once
  cat greekfile | tr “[a-z]” “[A-Z]”: Translate lower to capital  letter
  cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m' :translate A to N B to M C to O ....
  echo &quot;Welcome To GeeksforGeeks&quot; | tr [:space:] '\t': translate all the white-space to tabs
+ $ tr '{}' '()' &lt; inputfile &gt; outputfile:  translate if it is a brace, and write the  
+
+ 
+ 
+ 
  
 </rich_text>
 				<rich_text underline="single" weight="heavy">wget</rich_text>
@@ -555,17 +560,18 @@ color  1e: background black font=yellow
 		<rich_text>: List all  programs  installed
 </rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="hashcat" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1590569730.28" ts_lastsave="1590585893.47" unique_id="5">
+	<node custom_icon_id="0" foreground="" is_bold="False" name="hashcat" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1590569730.28" ts_lastsave="1590667094.42" unique_id="5">
 		<rich_text>
 </rich_text>
 		<rich_text scale="h3">Create a file dictionary with MBD5 hashes</rich_text>
 		<rich_text>
 
-echo -n “Password” | md5sum | tr -d ”-” &gt;&gt; target_hashes.txt
- echo -n “HELLO” | md5sum | tr -d ”-” &gt;&gt; target_hashes.txt
- echo -n “MYSECRET” | md5sum | tr -d ”-” &gt;&gt; target_hashes.txt
- echo -n “Test1234″ | md5sum | tr -d ”-” &gt;&gt; target_hashes.txt
- echo -n “P455w0rd” | md5sum | tr -d ”-” &gt;&gt; target_hashes.txt
+echo -n “Password” | md5sum | tr -d ' -' &gt;&gt; target_hashes.txt
+
+ echo -n “HELLO” | md5sum | tr -d  ' -' &gt;&gt; target_hashes.txt
+ echo -n “MYSECRET” | md5sum | tr -d ' -' &gt;&gt; target_hashes.txt
+ echo -n “Test1234″ | md5sum | tr -d ' -' &gt;&gt; target_hashes.txt
+ echo -n “P455w0rd” | md5sum | tr -d ' -' &gt;&gt; target_hashes.txt
 
 
 
@@ -620,7 +626,7 @@ In the final step, we can now start cracking the hashes contained in the target_
  
  The  -O  at the end of  the command line will increase the cracking speed, but will  limit the password length to  27
  
- 
+     
  
 
 
