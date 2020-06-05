@@ -1,0 +1,8 @@
+ #Stop monitor status and  return to manger  status
+airmon-ng stop wlp1s0mon
+service networking restart
+service network-manager restart
+
+echo "End monitor of wlp1s0mon" 
+ifconfig
+
