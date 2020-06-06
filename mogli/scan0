@@ -14,19 +14,19 @@ echo "airmon-ng check kill"
 echo "-------------------------------------------"
 airmon-ng check kill #List of processes that could cause trouble
 echo "-------------------------------------------"
-echo "a airmon-ng start wlan1"
+echo "a airmon-ng start wlan0"
 echo "-------------------------------------------"
-airmon-ng start wlan1 # Start monitoring wlan0
+airmon-ng start wlan0 # Start monitoring wlan0
 
  
 iwconfig
-#airodump-ng wlan1mon # (or mon0) list access points
-airodump-ng wlan1mon -w test_data_capture
-besside-ng wlan1mon
+#airodump-ng wlan0mon # (or mon0) list access points
+airodump-ng wlan0mon -w data_wlan0mon
+besside-ng wlan0mon
 #Stop monitor status and  return to manger  status
-airmon-ng stop wlan1mon
+airmon-ng stop wlan0mon
 service networking restart
 service network-manager restart
 ifconfig
-
+echo "output is in  /test_data/wlan0mon "
 

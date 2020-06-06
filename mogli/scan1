@@ -20,13 +20,14 @@ airmon-ng start wlan1 # Start monitoring wlan0
 
  
 iwconfig
-airodump-ng wlan1mon # (or mon1) list access points
-
+#airodump-ng wlan1mon # (or mon1) list access points
+airodump-ng wlan1mon -w  data_capture/wlan1mon
 besside-ng wlan1mon
 #      Stop monitor status and  return to manger  status
 airmon-ng stop wlan1mon
 service networking restart
 service network-manager restart
 ifconfig
+echo "Output data  stored in /data_wlan1mon"
 
 
