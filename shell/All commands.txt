@@ -41,6 +41,8 @@ cd Change Directory
 cfdisk Partition table manipulator for Linux
 chgrp Change group ownership
 chmod Change access permissions
+  chmod    a+rw   <FILE NAME>
+  
 chown Change file owner and group
 chroot Run a command with a different root directory
 chkconfig System services (runlevel)
@@ -232,7 +234,8 @@ printenv Print environment variables
 printf Format and print data •
 ps Process status
 pushd Save and then change the current directory
-pwd Print Working Directory
+pwd: Print Working Directory
+
 q
 quota Display disk usage and limits
 quotacheck Scan a file system for disk usage

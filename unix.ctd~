@@ -340,7 +340,7 @@ wlp4s0		Intel AC	iwlwifi - [phy0]
 			<rich_text link="webs https://overthewire.org">https://overthewire.org</rich_text>
 			<rich_text>
 </rich_text>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="Commands" prog_lang="custom-colors" readonly="False" tags="" ts_creation="0.0" ts_lastsave="1616842842.19" unique_id="21">
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Commands" prog_lang="custom-colors" readonly="False" tags="" ts_creation="0.0" ts_lastsave="1616839184.62" unique_id="21">
 				<rich_text> 
 </rich_text>
 				<rich_text underline="single" weight="heavy">ssh</rich_text>
@@ -450,9 +450,7 @@ nmap -sT localhost -p31000-32000:  scan localhost and ports from 31000 to 32000
  echo &lt;password&gt;| openssl s_client -quiet -connect &lt;host&gt;:&lt;port num&gt;:Open port with password
 
 
-</rich_text>
-				<rich_text underline="single" weight="heavy">pwd</rich_text>
-				<rich_text>: Parrent Working  Directory
+
 
 </rich_text>
 				<rich_text underline="single" weight="heavy">sort</rich_text>

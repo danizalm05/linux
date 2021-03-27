@@ -340,7 +340,7 @@ wlp4s0		Intel AC	iwlwifi - [phy0]
 			<rich_text link="webs https://overthewire.org">https://overthewire.org</rich_text>
 			<rich_text>
 </rich_text>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="Commands" prog_lang="custom-colors" readonly="False" tags="" ts_creation="0.0" ts_lastsave="1616842842.19" unique_id="21">
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Commands" prog_lang="custom-colors" readonly="False" tags="" ts_creation="0.0" ts_lastsave="1590666967.09" unique_id="21">
 				<rich_text> 
 </rich_text>
 				<rich_text underline="single" weight="heavy">ssh</rich_text>
@@ -374,11 +374,6 @@ base64 -d &lt;file name&gt; : decodes base64 encoded file
  cat .inhere :output  a hidden file name “nihere”
  cat /etc/bandit_pass/bandit14:  Output   passward 
  
-</rich_text>
-				<rich_text underline="single" weight="heavy">chmod</rich_text>
-				<rich_text>
-chmod a +rw &lt;file&gt;
-
 </rich_text>
 				<rich_text underline="single" weight="heavy">cp</rich_text>
 				<rich_text>
@@ -450,9 +445,7 @@ nmap -sT localhost -p31000-32000:  scan localhost and ports from 31000 to 32000
  echo &lt;password&gt;| openssl s_client -quiet -connect &lt;host&gt;:&lt;port num&gt;:Open port with password
 
 
-</rich_text>
-				<rich_text underline="single" weight="heavy">pwd</rich_text>
-				<rich_text>: Parrent Working  Directory
+
 
 </rich_text>
 				<rich_text underline="single" weight="heavy">sort</rich_text>
@@ -536,7 +529,7 @@ besside-ng  wlan0mon --bssid  &lt;mac&gt; -c &lt;channl num&gt;# listen to this 
  ifconfig </rich_text>
 		</node>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="cmd" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1584431613.66" ts_lastsave="1616839385.32" unique_id="20">
+	<node custom_icon_id="0" foreground="" is_bold="False" name="cmd" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1584431613.66" ts_lastsave="1616839024.19" unique_id="20">
 		<rich_text underline="single" weight="heavy">arp -av</rich_text>
 		<rich_text> :Displays and modifies the IP-to-Physical address translation tables used by
 address resolution protocol(arp).
@@ -549,8 +542,6 @@ tracert  </rich_text>
 nslookup
 nbtstat
 routh
-
-
 
 </rich_text>
 		<rich_text underline="single" weight="heavy">systeminfo</rich_text>
