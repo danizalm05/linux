@@ -572,7 +572,7 @@ color  1e: background black font=yellow
 		<rich_text>: List all  programs  installed
 </rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="hashcat" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1590569730.28" ts_lastsave="1590667094.42" unique_id="5">
+	<node custom_icon_id="0" foreground="" is_bold="False" name="hashcat" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1590569730.28" ts_lastsave="1591790777.52" unique_id="5">
 		<rich_text>
 </rich_text>
 		<rich_text scale="h3">Create a file dictionary with MBD5 hashes</rich_text>
@@ -598,7 +598,7 @@ locate wordlists: Find location of the wordlist </rich_text>
 locate rockyou.txt
         /usr/share/wordlists/rockyou.txt.gz
 ls  /usr/share/wordlists
-dirb  dirbuster  fasttrack.txt  fern-wifi  metasploit  nmap.lst  rockyou.txt  wfuzz
+output: dirb  dirbuster  fasttrack.txt  fern-wifi  metasploit  nmap.lst  rockyou.txt  wfuzz
 
 
 
