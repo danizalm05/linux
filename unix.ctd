@@ -364,7 +364,7 @@ besside-ng  wlan0mon --bssid  &lt;mac&gt; -c &lt;channl num&gt;# listen to this 
  ifconfig </rich_text>
     </node>
   </node>
-  <node name="Commands" unique_id="21" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="0" ts_lastsave="1617442851">
+  <node name="Commands" unique_id="21" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="0" ts_lastsave="1617441863">
     <rich_text> 
 </rich_text>
     <rich_text underline="single" weight="heavy">ssh</rich_text>
@@ -461,16 +461,16 @@ ip addr: Show private  ip
 
 </rich_text>
     <rich_text underline="single" weight="heavy">ls </rich_text>
-    <rich_text> -la lists files
+    <rich_text>  -la lists files
 </rich_text>
     <rich_text underline="single" weight="heavy">lspci</rich_text>
-    <rich_text>  lists PCI devices, 
+    <rich_text>   lists PCI devices, 
 </rich_text>
     <rich_text underline="single" weight="heavy">lsusb</rich_text>
-    <rich_text>  lists USB devices 
+    <rich_text>   lists USB devices 
 </rich_text>
     <rich_text underline="single" weight="heavy">lspcmcia</rich_text>
-    <rich_text>  ists PCMCIA cards
+    <rich_text>   ists PCMCIA cards
 
 
 
