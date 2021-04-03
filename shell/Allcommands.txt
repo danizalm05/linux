@@ -353,7 +353,9 @@ v Verbosely list directory contents (`ls -l -b')
 vdir Verbosely list directory contents (`ls -l -b')
 vi Text Editor
 vmstat Report virtual memory statistics
+
 w
+-----------------------
 wait Wait for a process to complete •
 watch Execute/display a program periodically
 
