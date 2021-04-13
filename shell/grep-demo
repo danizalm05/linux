@@ -1,0 +1,9 @@
+#!/bin/bash
+#https://www.youtube.com/watch?v=9AEqRpE-pAM&list=PLsSTa0x6YacC2jNX9iV1ukbA8g4mcTfdE&index=6
+grep "youtube" README.md #Output all lines that contains the word "was"  
+grep  --color=always "we[a-z]" README.md #: 12wea456
+ 
+grep "^http" README.md # pattern  must occur at the beginning of each line
+
+
+grep --color=always "[CcFfPp]o[RrSsTt]" README.md # 3 letters sequence in a word like for  forward, reposit

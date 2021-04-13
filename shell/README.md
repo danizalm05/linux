@@ -1,9 +1,9 @@
 # shell
  Shell Scripting Tutorial
  
- https://www.youtube.com/watch?v=hwrnmQumtPw
+https://www.youtube.com/watch?v=hwrnmQumtPw
  
- http://www.newthinktank.com/2016/06/shell-scripting-tutorial/
+http://www.newthinktank.com/2016/06/shell-scripting-tutorial/
 
 
 How commit a change to the README file.
