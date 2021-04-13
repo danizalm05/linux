@@ -364,19 +364,12 @@ besside-ng  wlan0mon --bssid  &lt;mac&gt; -c &lt;channl num&gt;# listen to this 
  ifconfig </rich_text>
     </node>
   </node>
-  <node name="Commands" unique_id="21" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="0" ts_lastsave="1617441863">
-    <rich_text> 
-</rich_text>
-    <rich_text underline="single" weight="heavy">ssh</rich_text>
-    <rich_text> (</rich_text>
-    <rich_text link="webs https://www.ssh.com/ssh/protocol">Secure Shell</rich_text>
-    <rich_text>):  secure remote login from one computer to another. 
-ssh://[user@]hostname -p [:port number]
-ssh  bandit0@bandit.labs.overthewire.org  -p 2220
-ssh -i sshkey.private bandit14@localhost :  Selects a file from which the identity (private key) for public key  read. 
-ssh -p 2220 bandit18@bandit.labs.overthewire.org ls: login and run ‘ls’ command
-ssh -p 2220 bandit18@bandit.labs.overthewire.org cat &lt;file&gt;: login and run ‘cat’ command
-   
+  <node name="Commands" unique_id="21" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="0" ts_lastsave="1618245087">
+    <rich_text>
+# </rich_text>
+    <rich_text link="webs https://www.youtube.com/channel/UCv7IDZW4vAf3sPKtTm6cQCg/playlists">https://www.youtube.com/channel/UCv7IDZW4vAf3sPKtTm6cQCg/playlists</rich_text>
+    <rich_text>
+
 
 
 
@@ -454,6 +447,7 @@ find / -type f -user bandit7 -group bandit6 -size 33 :   find a file tored somew
     <rich_text>   displays the identity of the user running the session along with the list of groups
 they belong to
 
+info
 </rich_text>
     <rich_text underline="single" weight="heavy">ip</rich_text>
     <rich_text>
@@ -497,7 +491,7 @@ nmap -sT localhost -p31000-32000:  scan localhost and ports from 31000 to 32000
 </rich_text>
     <rich_text underline="single" weight="heavy">openssl:</rich_text>
     <rich_text> Cryptography secure Sockets Layer network connections 
- echo &lt;password&gt;| openssl s_client -quiet -connect &lt;host&gt;:&lt;port num&gt;:Open port with password
+ echo &lt;password&gt;| openssl s_client -quiet -connect &lt;host&gt;:&lt;port num&gt;: Open port with password
 
 
 </rich_text>
@@ -505,15 +499,39 @@ nmap -sT localhost -p31000-32000:  scan localhost and ports from 31000 to 32000
     <rich_text>: Parrent Working  Directory
 
 </rich_text>
+    <rich_text underline="single" weight="heavy">rm</rich_text>
+    <rich_text> &lt;file&gt;: Remove a file 
+
+</rich_text>
     <rich_text underline="single" weight="heavy">sort</rich_text>
-    <rich_text> 
+    <rich_text> :
 sort data.txt | uniq -c  : line of text that occurs only once 
+
+</rich_text>
+    <rich_text underline="single" weight="heavy">ssh</rich_text>
+    <rich_text> (</rich_text>
+    <rich_text link="webs https://www.ssh.com/ssh/protocol">Secure Shell</rich_text>
+    <rich_text>):  secure remote login from one computer to another. 
+ (sshd  process is started when the system boots  ) 
+ ssh kali@127.0.0.1
+ ssh  bandit0@bandit.labs.overthewire.org  -p 2220
+ ssh -i sshkey.private bandit14@localhost :  Selects a file from which the identity (private key) for public key  read. 
+ ssh -p 2220 bandit18@bandit.labs.overthewire.org ls: login and run ‘ls’ command
+ ssh -p 2220 bandit18@bandit.labs.overthewire.org cat &lt;file&gt;: login and run ‘cat’ command
+   
+
 
 </rich_text>
     <rich_text underline="single" weight="heavy">strings:</rich_text>
     <rich_text>  print the strings of printable characters in files.
  strings data.txt | grep '^=' : Find strings beginning with several ‘=’ characters.
- 
+
+</rich_text>
+    <rich_text underline="single" weight="heavy">systemctl </rich_text>
+    <rich_text>:  check status of services
+ systemctl start &lt;process  name&gt;  : Start a process
+ systemctl status  &lt;process  name&gt;
+
 </rich_text>
     <rich_text underline="single" weight="heavy">tar</rich_text>
     <rich_text> 
