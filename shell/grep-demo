@@ -1,9 +1,61 @@
 #!/bin/bash
+
+# line number : -n 
+# color: --color=always
+# grep "tgt/etc/*"  match tgt/etc followed by zero or more / characters. 
+# .* = wildcard 
 #https://www.youtube.com/watch?v=9AEqRpE-pAM&list=PLsSTa0x6YacC2jNX9iV1ukbA8g4mcTfdE&index=6
-grep "youtube" README.md #Output all lines that contains the word "was"  
+
+
+
+echo 
+echo "1: www" 
+grep -n "www" README.md #Output all lines that contains the word "was"  
+
+echo 
+echo "2:" 
 grep  --color=always "we[a-z]" README.md #: 12wea456
  
 grep "^http" README.md # pattern  must occur at the beginning of each line
 
+pat="[CcFfPp]o[RrSsTt]"
+echo 
+echo "4:"  "patterb =" $pat
+grep --color=always   $pat README.md # 3 letters sequence in a word like for  forward, reposit
 
-grep --color=always "[CcFfPp]o[RrSsTt]" README.md # 3 letters sequence in a word like for  forward, reposit
+pat="^d"
+echo 
+echo "5:"  "patterb =" $pat
+ls -la | grep --color=always   $pat   # find all  sub-directory in this  directory
+
+pat="p[^a-p]s" # 3 letters sequence seconed letter is not [a-z]
+#echo 
+#echo "6:"  "pattern =" $pat
+#grep --color=always   $pat  README.md
+
+
+pat="ter$" # end with ter
+echo 
+echo "7:"  "pattern=" $pat
+grep --color=always   $pat  README.md
+
+pat="r....e" #  remote, Propose,
+echo 
+echo "8:"  "pattern=" $pat
+grep --color=always   $pat  README.md
+
+pat="\.$" #  a full stop at the end of a line
+echo 
+echo "9:"  "pattern=" $pat
+grep -n --color=always   $pat  README.md
+
+pat="[a-c]om*.." # zerp m or more and any two more character: commit,comput , about
+echo 
+echo "10:"  "pattern=" $pat
+grep -n --color=always   $pat  README.md
+
+
+pat="r.*s" # zerp m or more and any two more character: commit,comput , about
+echo 
+echo "11:"  "pattern=" $pat
+grep -n --color=always   $pat  README.md
