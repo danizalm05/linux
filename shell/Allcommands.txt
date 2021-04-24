@@ -279,9 +279,9 @@ source Run commands from a file `.'
 split Split a file into fixed-size pieces
 
 ssh Secure Shell client (remote login program)
- ssh://[user@]hostname[:port]
- ssh  bandit0@bandit.labs.overthewire.org  -p 2220
-
+  ssh://[user@]hostname[:port]
+  ssh bandit4@bandit.labs.overthewire.org -p 2220
+       # password = pIwrPrtPN36QITSp3EQaw936yaFoFgAB 
 
 
 strace Trace system calls and signals
@@ -360,8 +360,12 @@ wait Wait for a process to complete •
 watch Execute/display a program periodically
 
 wc Print byte, word, and line counts
+
 whereis Search the user's $path, man pages and source files for a program
+  whereis ssh
+
 which Search the user's $path for a program file
+  which ssh 
 while Execute commands
 who Print all usernames currently logged in
 whoami Print the current user id and name (`id -un')

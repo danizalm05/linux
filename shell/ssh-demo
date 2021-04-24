@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#https://www.youtube.com/watch?v=w_Z8BT_HlOk&list=PLsSTa0x6YacC2jNX9iV1ukbA8g4mcTfdE&index=6 
+# 
+
+
+echo "ssh demo"
+echo "1: whereis ssh"
+whereis ssh
+echo "2: which ssh "
+which ssh
+
+echo  "ssh://[user@]hostname[:port]"
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+# password = pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+# whoami -> bandit4
+# exit
+
+
