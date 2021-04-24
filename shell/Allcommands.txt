@@ -26,23 +26,25 @@ bzip2: compressed data
  bzip2 -d data: Decompress   file
 
  
-c
+c    
 
 cal Display a calendar
 case Conditionally perform a command
 cat Concatenate and print (display) the content of files
  cat ./- : out a file called ‘- ’
  cat "spaces in this filename":  output a file called “spaces in this filename” 
- cat .inhere :output  a hidden file name “nihere”
+ cat .inhere :output  a hidden file name “ihere”
 
 
 
 cd Change Directory
 cfdisk Partition table manipulator for Linux
 chgrp Change group ownership
+
 chmod Change access permissions
-  chmod    a+rw   <FILE NAME>
-  
+   chmod    a+rw   <FILE NAME>
+   chmod  666      <FILE NAME>  # give read/write access  to  all
+
 chown Change file owner and group
 chroot Run a command with a different root directory
 chkconfig System services (runlevel)
@@ -60,6 +62,8 @@ crontab Schedule a command to run at a later time
 csplit Split a file into context-determined pieces
 cut Divide a file into several parts
 
+curl:  transferring data using various network protocols.  
+ curl -O  <url>: Download file 
 d
 
 date Display or change the date & time
@@ -67,8 +71,11 @@ dc Desk Calculator
 dd Convert and copy a file, write disk headers, boot records
 ddrescue Data recovery tool
 declare Declare variables and give them attributes •
-df Display free disk space
-diff Display the differences between two files
+
+df: Display free disk space
+
+diff: Display the differences between two files
+  diff <file 1> <file 2>:   compare files line by line
 diff3 Show differences among three files
 dig DNS lookup
 dir Briefly list directory contents
@@ -108,12 +115,19 @@ fg Send job to foreground
 fgrep Search file(s) for lines that match a fixed string
 file: Determine file type
   file ./*  : Show type of all  files in this directory
+
 find: Search for files that meet a desired criteria
- find
- find ./ -size 1033c ! -executable:    find a file somewhere under the inhere directory and has  all  of the   following  properties:  
+  find ./ -size 1033c ! -executable: find a file somewhere under the inhere directory and has  all  of the   following  properties:  
      human-readable   • 1033 bytes in size  • not executable
- find / -type f -user bandit7 -group bandit6 -size 33c :   find a file tored somewhere on the server and has all of the following properties:
-    owned by user bandit7   owned by group bandit6  33 bytes in size
+  find / -type f -user bandit7 -group bandit6 -size 33c :   find a file  somewhere on the
+        server and has all of the following properties:
+          owned by user bandit7   owned by group bandit6  33 bytes in size
+  find -name "filename": Find file by its file name
+  find / -user bandit20:   find all  file  owned  by user = bandit20
+ 
+
+
+
 fmt Reformat paragraph text
 fold Wrap text to fit a specified width.
 for Expand words, and execute commands
@@ -240,6 +254,7 @@ q
 quota Display disk usage and limits
 quotacheck Scan a file system for disk usage
 quotactl Set disk quotas
+
 r
 ram ram disk device
 rcp Copy files between two machines
@@ -254,8 +269,8 @@ return Exit a shell function
 rev Reverse lines of a file
 rm Remove files
 rmdir Remove folder(s)
-rsync Remote file copy (Synchronize file trees)
-
+ 
+runlevel: Return 0-6 number  that representswhat system services are operating. 
 s
 
 screen Multiplex terminal, run remote shells via ssh
