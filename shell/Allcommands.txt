@@ -26,7 +26,7 @@ bzip2: compressed data
  bzip2 -d data: Decompress   file
 
  
-c
+c    
 
 cal Display a calendar
 case Conditionally perform a command
@@ -40,9 +40,11 @@ cat Concatenate and print (display) the content of files
 cd Change Directory
 cfdisk Partition table manipulator for Linux
 chgrp Change group ownership
+
 chmod Change access permissions
-  chmod    a+rw   <FILE NAME>
-  
+   chmod    a+rw   <FILE NAME>
+   chmod  666      <FILE NAME>  # give read/write access  to  all
+
 chown Change file owner and group
 chroot Run a command with a different root directory
 chkconfig System services (runlevel)
@@ -240,6 +242,7 @@ q
 quota Display disk usage and limits
 quotacheck Scan a file system for disk usage
 quotactl Set disk quotas
+
 r
 ram ram disk device
 rcp Copy files between two machines
@@ -254,8 +257,8 @@ return Exit a shell function
 rev Reverse lines of a file
 rm Remove files
 rmdir Remove folder(s)
-rsync Remote file copy (Synchronize file trees)
-
+ 
+runlevel: Return 0-6 number  that representswhat system services are operating. 
 s
 
 screen Multiplex terminal, run remote shells via ssh
