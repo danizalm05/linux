@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# line number : -n 
-# color: --color=always
+# -n : print line number  
+# -v : print lines that don't contain the string
+# -e : look for list of dffernet string
 # grep "tgt/etc/*"  match tgt/etc followed by zero or more / characters. 
 # .* = wildcard 
 #https://www.youtube.com/watch?v=9AEqRpE-pAM&list=PLsSTa0x6YacC2jNX9iV1ukbA8g4mcTfdE&index=6
@@ -23,15 +24,12 @@ echo
 echo "4:"  "patterb =" $pat
 grep --color=always   $pat README.md # 3 letters sequence in a word like for  forward, reposit
 
-pat="^d"
+pat="^d"# Start with d
 echo 
 echo "5:"  "patterb =" $pat
 ls -la | grep --color=always   $pat   # find all  sub-directory in this  directory
 
-pat="p[^a-p]s" # 3 letters sequence seconed letter is not [a-z]
-#echo 
-#echo "6:"  "pattern =" $pat
-#grep --color=always   $pat  README.md
+ 
 
 
 pat="ter$" # end with ter
@@ -55,7 +53,33 @@ echo "10:"  "pattern=" $pat
 grep -n --color=always   $pat  README.md
 
 
-pat="r.*s" # zerp m or more and any two more character: commit,comput , about
+pat="r.*s" #  
 echo 
 echo "11:"  "pattern=" $pat
 grep -n --color=always   $pat  README.md
+
+
+ls /var/log/messages*   -la
+
+
+pat="^Apr 24 05:01:57 " # Lines that start with   Apr 24 05
+echo 
+echo "12:"  "pattern=" $pat
+grep -n --color=always   $pat  /var/log/messages
+
+pat="^Apr" # Lines that start with   'Apr' 
+echo 
+echo "13:"  "pattern=" $pat
+grep -v -n     $pat  /var/log/messages   # -v means Doesnt start with the string in pattern
+
+echo "14:"   
+   #  -e look for list of differnet string: 34, kali,  lihttdm
+grep -n --color=always     -e "34" -e "kali" -e "lightdm"  /var/log/messages
+ 
+echo "15:"   
+   #  -e look for list of differnet string: 34 or kali or lihttdm
+grep      -e "kali" -e "lightdm"  /var/log/messages | grep "34
+
+echo "16:" # ("kali" or  "lightdm") and  "error"
+grep  -n --color=always     -e "kali" -e "lightdm"  /var/log/messages | grep  --color=always  "error"
+
