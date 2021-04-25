@@ -139,15 +139,18 @@ function Define Function Macros
 fuser Identify/kill the process that is accessing a file
 
 g
-
+----------------------
 gawk Find and Replace text within file(s)
 getopts Parse positional parameters
 grep: Search file(s) for lines that match a given pattern
   grep "millionth"  data.txt:  find the line in file data.txt next to the word millionth
 
-
-
-
+gzip: Compress file 
+   gzip <file name>
+   
+gunzip :Uncompress  file
+   gunzip <file name>  
+   
 groupadd Add a user security group
 groupdel Delete a group
 groupmod Modify a group
