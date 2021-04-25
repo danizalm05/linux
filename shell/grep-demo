@@ -5,6 +5,7 @@
 # -e : look for list of dffernet string
 # grep "tgt/etc/*"  match tgt/etc followed by zero or more / characters. 
 # .* = wildcard 
+#/home/kali/Desktop/linux/shell/
 #https://www.youtube.com/watch?v=9AEqRpE-pAM&list=PLsSTa0x6YacC2jNX9iV1ukbA8g4mcTfdE&index=6
 
 
@@ -73,13 +74,18 @@ echo "13:"  "pattern=" $pat
 grep -v -n     $pat  /var/log/messages   # -v means Doesnt start with the string in pattern
 
 echo "14:"   
-   #  -e look for list of differnet string: 34, kali,  lihttdm
+   #  -e look for list of differnet string: '34' or 'kali' or  'ihttdm'
 grep -n --color=always     -e "34" -e "kali" -e "lightdm"  /var/log/messages
  
-echo "15:"   
-   #  -e look for list of differnet string: 34 or kali or lihttdm
-grep      -e "kali" -e "lightdm"  /var/log/messages | grep "34
+#cat  /var/log/user.log
 
-echo "16:" # ("kali" or  "lightdm") and  "error"
+ 
+echo 
+echo "15:"   
+grep -n --color=always "files$" /var/log/user.log  # Lines that ends  with   'files' 
+ echo "end 15:" $pat 
+
+
+echo "25:" # lines that contains ("kali" or  "lightdm") and  "error"
 grep  -n --color=always     -e "kali" -e "lightdm"  /var/log/messages | grep  --color=always  "error"
 

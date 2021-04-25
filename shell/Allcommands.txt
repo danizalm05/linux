@@ -88,7 +88,7 @@ dpkg --list: list of all installed packages on your computer
 dmesg Print kernel & driver messages
 du Estimate file space usage
 
-  e
+e
 --------------------------------------
 echo Display message on screen •
 egrep Search file(s) for lines that match an extended expression
@@ -157,13 +157,16 @@ gzip: Compress or decompress named file(s)
 
 
 h
-
+------------------
 hash Remember the full pathname of a name argument
 head Output the first part of file(s)
 help Display help for a built-in command •
 history Command History
-hostname Print or set system name
+hostname: Print or set system name
+   hostname -I :print host 'ip'
+   hostname : Print  system name
 i
+-------------------
 iconv Convert the character set of a file
 id Print user and group id's
 if Conditionally perform a command
@@ -172,6 +175,9 @@ ifdown Stop a network interface
 ifup Start a network interface up
 import Capture an X server screen and save the image to file
 install Copy files and set attributes
+ip 
+  ip addr show: Print ip of local  system 
+  ip link show 
 j
 jobs List active jobs •
 join Join lines on a common field
