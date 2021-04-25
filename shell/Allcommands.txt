@@ -13,6 +13,7 @@ awk Find and Replace text, database sort/validate/index
 
 
 b
+---------
 base64
 base64 -d <file name> : decodes base64 encoded file  
 
@@ -22,8 +23,9 @@ bc Arbitrary precision calculator language
 bg Send to background
 break Exit from a loop •
 builtin Run a shell builtin
+
 bzip2: compressed data 
- bzip2 -d data: Decompress   file
+ bzip2 -d <data> : Decompress   file
 
  
 c    
@@ -320,11 +322,17 @@ symlink Make a new name for a file
 sync Synchronize data on disk with memory
 
 t
-
+---------------------
 tail Output the last part of file
+
 tar: Tape ARchiver
- tar 
- tar -xf data5.bin :Decompress  file   
+  tar -xf data5.bin :Decompress  file
+  tar -ztf data5.bin :Output list of files No Decompress    
+  tar -cfv a.tar /etc: store all files from the  directory  /etc into a.tar verbosely   
+  tar -xzvf logz.tgz: Uncompress  tgz file)
+  tar -jxvf logz.tar.bzip2: Uncompress  tar.bzip2 file
+       
+ 
  
  
 
