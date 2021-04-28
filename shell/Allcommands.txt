@@ -46,7 +46,7 @@ chgrp Change group ownership
 chmod Change access permissions
    chmod    a+rw   <FILE NAME>
    chmod  666      <FILE NAME>  # give read/write access  to  all
-
+   
 chown: Change file owner and group
    sudo chown usr11 fff.c: change the user ownership of the file fff.c to the user usr11.
 
@@ -192,11 +192,17 @@ k
 kill Stop a process from running
 killall Kill processes by name
 
-l
-
+      l
+----------------------
 less Display output one screen at a time
-let Perform arithmetic on shell variables •
-ln Create a symbolic link to a file
+let Perform arithmetic on shell variables  
+
+ln: Create a symbolic link to a file
+  ln -s  <FILE> <LINK> : Soft link ( just  path for original file,Each soft 
+        linked file contains a separate Inode value that points to the original)  
+  ln     <FILE> <LINK> : Hard ink (assigned same Inode as original
+     they reference the same physical file  and remain linked if original moved)  
+
 local Create variables •
 locate Find files
 logname Print current login name
@@ -324,7 +330,7 @@ suspend Suspend execution of this shell •
 symlink Make a new name for a file
 sync Synchronize data on disk with memory
 
-t
+         t
 ---------------------
 tail Output the last part of file
 
