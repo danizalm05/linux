@@ -43,10 +43,10 @@ cd Change Directory
 cfdisk Partition table manipulator for Linux
 chgrp Change group ownership
 
-chmod Change access permissions
-   chmod    a+rw   <FILE NAME>
-   chmod  666      <FILE NAME>  # give read/write access  to  all
-   
+chmod: Change access permissions
+   chmod  a+rw   <FILE NAME># give read/write access  to  all
+   chmod  666    <FILE NAME>  # give read/write access  to  all
+   chmod  u-w    <FILE NAME>  # remove write permission for user        
 chown: Change file owner and group
    sudo chown usr11 fff.c: change the user ownership of the file fff.c to the user usr11.
 
