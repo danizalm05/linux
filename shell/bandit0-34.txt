@@ -1,0 +1,17 @@
+https://overthewire.org/wargames/bandit 
+
+ttps://www.youtube.com/watch?v=PRAjBlys-7g&list=PL1H1sBF1VAKUsYdQd94dO9MgSaY2p1AJ4
+7:10
+
+Bandit Level 0
+overthewire.org/wargames/bandit/bandit0.htmll
+   ssh bandit0@bandit.labs.overthewire.org -p 2220
+   passward bandit0
+   cat  readme
+   boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+Bandit Level 1
+overthewire.org/wargames/bandit/bandit1.htmll
+   ssh bandit1@bandit.labs.overthewire.org -p 2220
+   pass boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
