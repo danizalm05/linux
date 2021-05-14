@@ -1,6 +1,6 @@
 https://overthewire.org/wargames/bandit 
 
-ttps://www.youtube.com/watch?v=PRAjBlys-7g&list=PL1H1sBF1VAKUsYdQd94dO9MgSaY2p1AJ4
+www.youtube.com/watch?v=PRAjBlys-7g&list=PL1H1sBF1VAKUsYdQd94dO9MgSaY2p1AJ4
 7:10
 
 Bandit Level 0
@@ -10,8 +10,36 @@ overthewire.org/wargames/bandit/bandit0.htmll
    cat  readme
    boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 
-Bandit Level 1
+0 → 1
 overthewire.org/wargames/bandit/bandit1.htmll
    ssh bandit1@bandit.labs.overthewire.org -p 2220
    pass boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+   cat ./-
+   CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+2 → 3
+overthewire.org/wargames/bandit/bandit3.htmll
+   ssh bandit2@bandit.labs.overthewire.org -p 2220
+   pass CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+   problem: 
+        password  is stored in a file called: spaces in this filename
+   solution:
+        cat 'spaces in this filename'
+   output:
+      UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+https://www.youtube.com/watch?v=DOvh5ybBUPk&list=PL1H1sBF1VAKUsYdQd94dO9MgSaY2p1AJ4&index=2
+ 
+3 → 4
+overthewire.org/wargames/bandit/bandit4.htmll
+   ssh bandit4@bandit.labs.overthewire.org -p 2220
+   pass  
+   problem: 
+       
+   solution:
+       
+   output:
+     
+
 
