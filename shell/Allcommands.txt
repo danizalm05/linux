@@ -1,7 +1,7 @@
  
-a
-
-apropos Search Help manual pages (man -k)
+     a
+------------------
+apropos: Search Help manual pages (man -k)
 
 apt-get : general command for installing programs and manipulating installed programs.
 apt-get --purge remove gimp : uninstalls gimp and deletes all the configuration files
@@ -12,7 +12,7 @@ awk Find and Replace text, database sort/validate/index
 
 
 
-b
+   b
 ---------
 base64
 base64 -d <file name> : decodes base64 encoded file  
@@ -221,6 +221,7 @@ m
 
 make Recompile a group of programs
 man: Help manual
+   man ls
 mkdir: Create new folder(s)
   mkdir /tmp/yourname 
 mkfifo Make FIFOs (named pipes)
@@ -405,7 +406,8 @@ wc Print byte, word, and line counts
 
 whereis Search the user's $path, man pages and source files for a program
   whereis ssh
-
+whatis:  display one-line manul command
+  whatis ls
 which Search the user's $path for a program file
   which ssh 
 while Execute commands
