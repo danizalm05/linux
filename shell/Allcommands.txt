@@ -92,7 +92,7 @@ dpkg --list: list of all installed packages on your computer
 dmesg Print kernel & driver messages
 du Estimate file space usage
 
-e
+         e
 --------------------------------------
 echo Display message on screen •
 egrep Search file(s) for lines that match an extended expression
@@ -100,6 +100,7 @@ eject Eject removable media
 enable Enable and disable builtin shell commands •
 
 env:    Environment variables
+       env | grep USER : find user verible
 eog:    "img.jpg" open image file
 ethtool Ethernet card settings
 eval Evaluate several commands/arguments
@@ -110,18 +111,19 @@ expand Convert tabs to spaces
 export Set an environment variable
 expr Evaluate expressions
 
-f
-
+         f
+-----------------
 false Do nothing, unsuccessfully
 fdformat Low-level format a floppy disk
 fdisk Partition table manipulator for Linux
 fg Send job to foreground
 fgrep Search file(s) for lines that match a fixed string
+
 file: Determine file type
   file ./*  : Show type of all  files in this directory
 
 find: Search for files that meet a desired criteria
-  find ./ -size 1033c ! -executable: find a file somewhere under the inhere directory and has  all  of the   following  properties:  
+  find ./ -size 1033c ! -executable: find a file somewhere under the inhere directory and has following  properties:  
      human-readable   • 1033 bytes in size  • not executable
   find / -type f -user bandit7 -group bandit6 -size 33c :   find a file  somewhere on the
         server and has all of the following properties:
@@ -172,7 +174,8 @@ history Command History
 hostname: Print or set system name
    hostname -I :print host 'ip'
    hostname : Print  system name
-i
+ 
+       i
 -------------------
 iconv Convert the character set of a file
 id: Print user and group id's
@@ -185,6 +188,8 @@ install Copy files and set attributes
 ip 
   ip addr show: Print ip of local  system 
   ip link show 
+
+
 j
 jobs List active jobs •
 join Join lines on a common field
@@ -204,7 +209,9 @@ ln: Create a symbolic link to a file
      they reference the same physical file  and remain linked if original moved)  
 
 local Create variables •
-locate Find files
+locate: Find files
+     locate sysctl.conf
+
 logname Print current login name
 logout Exit a login shell •
 look Display lines beginning with a given string
@@ -275,7 +282,8 @@ quota Display disk usage and limits
 quotacheck Scan a file system for disk usage
 quotactl Set disk quotas
 
-r
+         r
+--------------------
 ram ram disk device
 rcp Copy files between two machines
 read Read a line from standard input •
@@ -289,7 +297,8 @@ return Exit a shell function
 rev Reverse lines of a file
 rm Remove files
 rmdir Remove folder(s)
- 
+rpm: RPM Package Manager QUERYING AND VERIFYING PACKAGES
+
 runlevel: Return 0-6 number  that representswhat system services are operating. 
 s
 
@@ -397,18 +406,18 @@ vdir Verbosely list directory contents (`ls -l -b')
 vi Text Editor
 vmstat Report virtual memory statistics
 
-w
+        w
 -----------------------
 wait Wait for a process to complete •
 watch Execute/display a program periodically
 
 wc Print byte, word, and line counts
 
-whereis Search the user's $path, man pages and source files for a program
+whereis: Search the user's $path, man pages and source files for a program
   whereis ssh
 whatis:  display one-line manul command
   whatis ls
-which Search the user's $path for a program file
+which: Search the user's $path for a program file
   which ssh 
 while Execute commands
 who Print all usernames currently logged in
