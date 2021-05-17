@@ -1,5 +1,5 @@
  
-     a
+       a
 ------------------
 apropos: Search Help manual pages (man -k)
 
@@ -300,8 +300,9 @@ rmdir Remove folder(s)
 rpm: RPM Package Manager QUERYING AND VERIFYING PACKAGES
 
 runlevel: Return 0-6 number  that representswhat system services are operating. 
-s
 
+          s
+-------------------
 screen Multiplex terminal, run remote shells via ssh
 scp Secure copy (remote file copy)
 sdiff Merge two files interactively
@@ -339,6 +340,10 @@ sum Print a checksum for a file
 suspend Suspend execution of this shell •
 symlink Make a new name for a file
 sync Synchronize data on disk with memory
+systemctl: Control the systemd system and service manager
+
+
+ 
 
          t
 ---------------------
@@ -387,7 +392,8 @@ umount Unmount a device
 unalias Remove an alias •
 uname Print system information
 unexpand Convert spaces to tabs
-uniq Uniquify files
+uniq: Uniquify files. Report or omit repeated lines
+
 units Convert units from one scale to another
 unset Remove variable or function names
 unshar Unpack shell archive scripts

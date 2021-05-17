@@ -1,7 +1,7 @@
 https://overthewire.org/wargames/bandit 
 
 www.youtube.com/watch?v=PRAjBlys-7g&list=PL1H1sBF1VAKUsYdQd94dO9MgSaY2p1AJ4
-7:10
+ 
 
 Bandit Level 0
 overthewire.org/wargames/bandit/bandit0.htmll
@@ -73,15 +73,72 @@ overthewire.org/wargames/bandit/bandit6.html
   
 
 https://www.youtube.com/watch?v=rrtbSXVSO2s&list=PL1H1sBF1VAKUsYdQd94dO9MgSaY2p1AJ4&index=3
-7 → 8
- overthewire.org/wargames/bandit/bandit8.html 
-   ssh bandit7@bandit.labs.overthewire.org -p 2220
+6→ 7
+ https://overthewire.org/wargames/bandit/bandit7.html
+   ssh bandit6@bandit.labs.overthewire.org -p 2220
    pass    DXjZPULLxYr17uwoI01bNLQbtFemEgo7
-   problem:  Password for the next level is stored in the file data.txt next to the word millionth
+   problem: Password  stored somewhere on the server and has the following properties:
+
+    owned by user bandit7
+    owned by group bandit6
+    33 bytes in size
+
        
-   solution: 1.  
+   solution: 1.  find / -type f -user bandit7 -group bandit6 -size 33c
+             2.  cat /var/lib/dpkg/info/bandit7.password 
+             3.   
+    output:  HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+
+
+7 → 8
+ https://overthewire.org/wargames/bandit/bandit8.html
+   ssh bandit7@bandit.labs.overthewire.org -p 2220
+   pass     HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs 
+   problem:  Password  is in the file data.txt next to the word millionth
+       
+   solution:   cat data.txt | grep "millionth"  
+                
+    output: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+ 
+
+
+8 → 9
+ https://overthewire.org/wargames/bandit/bandit9.html
+   ssh bandit8@bandit.labs.overthewire.org -p 2220
+   pass  cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+   
+   problem: Password  is stored in 'data.txt' 
+         and is the only line of text that occurs only once  
+       
+   solution:   cat data.txt |sort | uniq  -u    
+               
+    output: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR 
+
+
+
+9 → 10
+ https://overthewire.org/wargames/bandit/bandit10.html
+   ssh bandit9@bandit.labs.overthewire.org -p 2220
+   pass  UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR 
+   
+   problem:  password  tored in the file data.txt 
+   in one of the few human-readable strings, preceded by several ‘=’ characters.  
+       
+   solution: 1.   
              2.   
              3.   
-    output:  
+    output: 
 
+10 → 11
+ https://overthewire.org/wargames/bandit/bandit11.html
+   ssh bandit10@bandit.labs.overthewire.org -p 2220
+   pass  
+   
+   problem:   
+       
+   solution: 1.   
+             2.   
+             3.   
+    output: 
 
