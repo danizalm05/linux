@@ -262,10 +262,16 @@ nslookup Query Internet name servers interactively
 o
 open Open a file in its default application
 op Operator access
-p
+
+       p
+--------------
 passwd Modify a user password
 paste Merge lines of files
 pathchk Check file name portability
+pgrep: Lists the process IDs which match the selection criteria  
+    pgrep -u root sshd: list the processes called sshd AND owned by root. 
+
+
 ping Test a network connection
 pkill Stop processes from running
 popd Restore the previous value of the current directory
@@ -273,7 +279,14 @@ pr Prepare files for printing
 printcap Printer capability database
 printenv Print environment variables
 printf Format and print data •
-ps Process status
+ps: report a snapshot of the current processes.
+   ps
+   ps  -ef :To see  every process
+   ps ax :using BSD syntax:
+   ps -ejH: Print a process tree:
+   ps -u  kali : Process list of a usr     
+     
+
 pushd Save and then change the current directory
 pwd: Print Working Directory
 
@@ -371,7 +384,7 @@ time Measure Program running time
 times User and system times
 touch: Change file timestamps or create empty if file does not exist
     touch <file1> <file2> <file3>: Create multiple empty files
-top List processes running on the system
+top: List processes running on the system
 traceroute Trace Route to Host
 trap Run a command when a signal is set(bourne)
 tr: Translate, squeeze, and/or delete characters
