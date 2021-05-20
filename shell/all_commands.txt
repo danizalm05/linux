@@ -15,7 +15,7 @@ awk Find and Replace text, database sort/validate/index
    b
 ---------
 base64
-base64 -d <file name> : decodes base64 encoded file  
+   base64 -d <file name> : decodes base64 encoded file  
 
 basename Strip directory and suffix from filenames
 bash GNU Bourne-Again SHell
@@ -224,8 +224,8 @@ lprm Remove jobs from the print queue
 ls List information about file(s)
 lsof List open files
 
-m
-
+      m
+-------------
 make Recompile a group of programs
 man: Help manual
    man ls
@@ -241,8 +241,8 @@ mtr Network diagnostics (traceroute/ping)
 mv Move or rename files or directories
 mmv Mass Move and rename (files)
 
-n
-
+    n
+--------------
 
 nc(ncat):   similar to cat command but for network.  
  nc -l localhost -p 5000: The netcat server is listening to port 5000.
@@ -259,7 +259,9 @@ nl Number lines and write files
 nohup Run a command immune to hangups
 notify-send Send desktop notifications
 nslookup Query Internet name servers interactively
-o
+
+        o
+---------------------
 open Open a file in its default application
 op Operator access
 
@@ -290,7 +292,8 @@ ps: report a snapshot of the current processes.
 pushd Save and then change the current directory
 pwd: Print Working Directory
 
-q
+         q
+--------------------
 quota Display disk usage and limits
 quotacheck Scan a file system for disk usage
 quotactl Set disk quotas

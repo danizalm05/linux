@@ -125,20 +125,94 @@ https://www.youtube.com/watch?v=rrtbSXVSO2s&list=PL1H1sBF1VAKUsYdQd94dO9MgSaY2p1
    problem:  password  tored in the file data.txt 
    in one of the few human-readable strings, preceded by several ‘=’ characters.  
        
-   solution: 1.   
-             2.   
+   solution: 1. strings  data.txt | grep '==='  
+             2. result: &========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk 
              3.   
-    output: 
+    output: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
 10 → 11
  https://overthewire.org/wargames/bandit/bandit11.html
    ssh bandit10@bandit.labs.overthewire.org -p 2220
+   pass truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk 
+   
+   problem: Password  is stored in  data.txt, which contains base64 encoded data  
+       
+   solution: 1. base64 -d   data.txt  
+             2. result:The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR  
+             3.   
+    output: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+https://www.youtube.com/watch?v=WVazel70ZzM&list=PL1H1sBF1VAKUsYdQd94dO9MgSaY2p1AJ4&index=5
+11 → 12
+ https://overthewire.org/wargames/bandit/bandit12.html
+   ssh bandit11@bandit.labs.overthewire.org -p 2220
+   pass  IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+ 
+   
+   problem: Password   is stored in the file data.txt, where
+           (a-z)   (A-Z) letters have been rotated by 13 positions  
+       
+   solution: 1.  cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+             2.  The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+          
+   password: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+12  → 13 
+ https://overthewire.org/wargames/bandit/bandit13.html
+   ssh bandit12@bandit.labs.overthewire.org -p 2220
+   pass: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu   
+ 
+   
+   problem:   
+       
+   solution: 1.  
+             2.  
+             3.   
+     
+
+13  → 14
+ https://overthewire.org/wargames/bandit/bandit14.html
+   ssh bandit13@bandit.labs.overthewire.org -p 2220
    pass  
    
    problem:   
        
-   solution: 1.   
-             2.   
-             3.   
-    output: 
+   solution: 1.  
+             2.  
+             3.  
+
+14  → 15 
+ https://overthewire.org/wargames/bandit/bandit15.html
+   ssh bandit14@bandit.labs.overthewire.org -p 2220
+   pass   
+   
+   problem:   
+       
+   solution: 1.  
+             2.  
+             3. 
+
+
+ 15  → 16 
+ https://overthewire.org/wargames/bandit/bandit16.html
+   ssh bandit15@bandit.labs.overthewire.org -p 2220
+   pass  
+   
+   problem:   
+       
+   solution: 1.  
+             2.  
+             3.  
+
+16  → 17
+ https://overthewire.org/wargames/bandit/bandit17.html
+   ssh bandit16@bandit.labs.overthewire.org -p 2220
+   pass  
+   
+   problem:   
+       
+   solution: 1.  
+             2.  
+             3. 
+
 
