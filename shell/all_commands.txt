@@ -422,7 +422,9 @@ usermod Modify user account
 users List users currently logged in
 uuencode Encode a binary file
 uudecode Decode a file created by uuencode
-v
+
+        v
+-----------------
 v Verbosely list directory contents (`ls -l -b')
 vdir Verbosely list directory contents (`ls -l -b')
 vi Text Editor
@@ -446,13 +448,18 @@ who Print all usernames currently logged in
 whoami Print the current user id and name (`id -un')
 wget "url"  Retrieve web pages or files via HTTP, HTTPS or FTP
 write Send a message to another user
-x
+
+         x
+----------------------
 xargs Execute utility, passing constructed argument list(s)
 xdg-open Open a file or URL in the user's preferred application.
 
-xxd: creates  a hex dump of a file 
-xxd test.txt: Output  hexdump to  console
-xxd -r data.txt data.out: Reverse from hex dump  to  original 
+xxd: make a hexdump or do the reverse.
+
+      xxd test.txt: Output  hexdump to  console
+      xxd -r data.txt data.out: Reverse from hex dump  to  original 
+
+
 yes Print a string until interrupted
 .:   Run a command script in the current shell
 !! Run the last command again
