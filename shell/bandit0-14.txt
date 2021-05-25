@@ -158,24 +158,43 @@ https://www.youtube.com/watch?v=WVazel70ZzM&list=PL1H1sBF1VAKUsYdQd94dO9MgSaY2p1
    password: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
 12  → 13 
- https://overthewire.org/wargames/bandit/bandit13.html
-   ssh bandit12@bandit.labs.overthewire.org -p 2220
-   pass: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu   
  
-   
-   problem:  Password  is stored in 'data.txt' 
-   which is a hexdump of a file that has been repeatedly compressed. 
-  
-  solution: 
-             1.   ls  -la 
-             2.   cat data.txt
-                   output: hex dump
-             3.   mkdir /tmp/mmmmmmm123
-             4.   cp data.txt /tmp/mmmmmmm123
-             5.   cd /tmp/mmmmmmm123
-             6.   xxd -r data.txt > hh  
-                    output: Store reverse of the  hexdump in 'hh' file
-  4:41
+https://overthewire.org/wargames/bandit/bandit13.html
+ssh bandit12@bandit.labs.overthewire.org -p 2220
+pass: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+
+problem: Password is stored in 'data.txt'
+which is a hexdump of a file that has been repeatedly compressed.
+
+solution:
+1. ls -la
+2. cat data.txt
+output: hex dump
+3. mkdir /tmp/mmmmmmm123
+4. cp data.txt /tmp/mmmmmmm123
+5. cd /tmp/mmmmmmm123
+6. xxd -r data.txt > myfile1.bin
+output: Store reverse of the hexdump in 'myfile1.bin' file
+7. file myfile1.bin
+output: myfile1.bin: gzip compressed data, was "data2.bin",
+8. zcat myfile1.bin > myfile2
+9. file myfile2
+output:myfile2: bzip2 compressed data, block size = 900k
+10. bzcat myfile2 > myfile3
+11. file myfile3
+output: myfile3: gzip compressed data, was "data4.bin",
+12 zcat myfile3 > myfile4
+13. file myfile4
+output: myfile4: POSIX tar archive (GNU)
+14 tar -xvf myfile4
+15 file data5.bin
+output: data5.bin: POSIX tar archive (GNU)
+16
+
+
+password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+https://medium.com/secttp/overthewire-bandit-level-12-439f655f6fd5
 
 
 13  → 14
