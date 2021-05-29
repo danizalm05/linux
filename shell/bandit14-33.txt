@@ -1,0 +1,87 @@
+https://overthewire.org/wargames/bandit 
+
+www.youtube.com/watch?v=PRAjBlys-7g&list=PL1H1sBF1VAKUsYdQd94dO9MgSaY2p1AJ4
+  
+ 
+
+13 → 14
+https://overthewire.org/wargames/bandit/bandit14.html
+ssh bandit13@bandit.labs.overthewire.org -p 2220
+pass 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+problem: Password stored in /etc/bandit_pass/bandit14
+and can only be read by user bandit14.
+For this level, you don’t get the next password, but you get
+a private SSH key that can be used to log into the next level.
+Note: localhost is a hostname that refers to the machine you are working on
+
+So we need to use ssh to login to another users account:
+bandit14@localhost for us.
+
+solution:
+1. ls
+output: A file sshkey.private. This is a private ssh key
+2. cat sshkey.private
+3. ssh -i ./sshkey.private bandit14@localhost
+4. print yes to question are you sure
+5. Now we are login as bandit14
+6. cat /etc/bandit_pass/bandit14
+pass = 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+14 → 15
+https://overthewire.org/wargames/bandit/bandit15.html
+ssh bandit14@bandit.labs.overthewire.org -p 2220
+pass: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+problem:
+
+solution: 1.
+2.
+3.
+ 
+
+14  → 15 
+ https://overthewire.org/wargames/bandit/bandit15.html
+   ssh bandit14@bandit.labs.overthewire.org -p 2220
+   pass   
+   
+   problem:   
+       
+   solution: 1.  
+             2.  
+             3. 
+
+
+ 15  → 16 
+ https://overthewire.org/wargames/bandit/bandit16.html
+   ssh bandit15@bandit.labs.overthewire.org -p 2220
+   pass  
+   
+   problem:   
+       
+   solution: 1.  
+             2.  
+             3.  
+
+16  → 17
+ https://overthewire.org/wargames/bandit/bandit17.html
+   ssh bandit16@bandit.labs.overthewire.org -p 2220
+   pass  
+   
+   problem:   
+       
+   solution: 1.  
+             2.  
+             3. 
+
+
+17  → 18
+ https://overthewire.org/wargames/bandit/bandit17.html
+   ssh bandit17@bandit.labs.overthewire.org -p 2220
+   pass  
+   
+   problem:   
+       
+   solution: 1.  
+             2.  
+             3. 
