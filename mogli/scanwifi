@@ -14,6 +14,7 @@ then
 echo "Usage : $0 port number"
 echo " 0 - wlan0 "
 echo " 1 - wlan1 "
+echo " 2 - wlp1s0 "
 exit 1
 fi
 
@@ -26,21 +27,20 @@ monport="wlan0mon"
 ;;
 
 1)
-port="wlan1"
-monport="wlan1mon"
+   port="wlan1"
+   monport="wlan1mon"
 ;;
 
 2)
-port = "wlan1"
-monport = "wlan1mon"
+   port="wlp1s0"
+   monport="wlp1s0mon" 
 ;;
 
-condrestart)
-if test "x`pidof anacron`" != x; then
-stop
-start
-fi
-;;
+  3) #yoga  ext wifi
+   port="wlxe894f6236dc9"
+   monport="wlan0mon" 
+ 
+  ;;
 
 *)
 echo "Option does not exists"
@@ -55,6 +55,8 @@ echo "[2]: airmon-ng start $port"
 airmon-ng start $port # Start monitoring $port
 
 echo "[3]: airodump-ng $monport -w test_data_capture"
+ 
+
 airodump-ng $monport -w test_data_capture
 
 echo "[4]: besside-ng $monport"
