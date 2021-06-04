@@ -244,7 +244,7 @@ mmv Mass Move and rename (files)
     n
 --------------
 
-nc(ncat):   similar to cat command but for network.  
+nc(ncat):   similar to cat command but for network(TCP, UDP.).  
  nc -l localhost -p 5000: The netcat server is listening to port 5000.
  ncat 192.168.1.100 80:  connect to a remote system port 80
  nc -v localhost 5000: establishes connection to the server on port 5000.(-v verbose)
@@ -262,8 +262,12 @@ nslookup Query Internet name servers interactively
 
         o
 ---------------------
+
 open Open a file in its default application
-op Operator access
+
+openssl:  Cryptography toolkit implementing the Secure Sockets
+       openssl s_client -quiet -connect <url:port>
+        echo password | openssl s_client -quiet -connect <url:port>
 
        p
 --------------
