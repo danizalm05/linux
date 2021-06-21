@@ -1,0 +1,3 @@
+ /etc/bandit_pass/bandit14
+      Password stored in
+  
