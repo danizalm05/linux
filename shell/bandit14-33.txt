@@ -133,20 +133,33 @@ medium.com/@theGirlWhoEncrypts/overthewire-bandit-level-16-level-17-958bd0bfcbc4
    ssh bandit17@bandit.labs.overthewire.org -p 2220
    pass: xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
    
-   problem:   
+   problem: Password  is in passwords.new and  is the only line that
+   has been changed between passwords.old  and passwords.new  
        
-   solution: 1.  
-             2.  
-             3. 
+   Write up: 1.  diff passwords.new passwords.old
+              output:42c42
+             < kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+               ---
+             > w0Yfolrc5bwjS4qw5mq1nnQi6mF03bii
+
+           - Lines preceded by a < are lines from the 1st file.
+           - Lines preceded by a > are lines from the 2nd file.
+           - The 3 dashes ---  separating the lines of 1st   2nd file ones.
+           
+          Password : kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd  
 
 
 18  → 19
  https://overthewire.org/wargames/bandit/bandit18.html
    ssh bandit18@bandit.labs.overthewire.org -p 2220
-   pass  
+   pass:kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd  
    
-   problem:   
+   problem:    The password for the next level is stored in a file 
+    readme in the home directory. Unfortunately, 
+    someone has modified .bashrc to log you out when you log in 
+    with SSH
        
-   solution: 1.  
+   solution: medium.com/@theGirlWhoEncrypts/overthewire-bandit-level-18-level-19-a446576eaa75
+             1.  
              2.  
              3. 

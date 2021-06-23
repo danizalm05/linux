@@ -1,5 +1,5 @@
  
-        a
+         a
 ------------------
 apropos: Search Help manual pages (man -k)
 
@@ -80,6 +80,9 @@ df: Display free disk space
 
 diff: Display the differences between two files
   diff <file 1> <file 2>:   compare files line by line
+  output:- Lines preceded by a < are lines from the 1st file.
+         - Lines preceded by a > are lines from the 2nd file.
+  
 diff3 Show differences among three files
 dig DNS lookup
 dir Briefly list directory contents
