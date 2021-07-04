@@ -159,7 +159,27 @@ medium.com/@theGirlWhoEncrypts/overthewire-bandit-level-16-level-17-958bd0bfcbc4
     someone has modified .bashrc to log you out when you log in 
     with SSH
        
-   solution: medium.com/@theGirlWhoEncrypts/overthewire-bandit-level-18-level-19-a446576eaa75
-             1.  
-             2.  
-             3. 
+   solution 1: medium.com/@theGirlWhoEncrypts/overthewire-bandit-level-18-level-19-a446576eaa75
+               ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme 
+                output IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+             Password: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+             
+   solution 2   Create “Pseudo Terminal”, with  -t option in our ssh command  
+                 ssh bandit18@bandit.labs.overthewire.org -p 2220 -t /bin/sh   and enter bandit18's password to login.     
+                 next run cat readme  
+    
+    
+    
+    
+  19  → 20
+ https://overthewire.org/wargames/bandit/bandit20.html
+   ssh bandit19@bandit.labs.overthewire.org -p 2220
+   pass:IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x 
+   
+   problem: To gain access to the next level, you should use the setuid binary in the homedirectory. 
+            
+             The password is in   (/etc/bandit_pass), after you have used the setuid binary.    
+       
+   solution  
+   Write up   
+      1. 

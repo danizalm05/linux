@@ -28,3 +28,22 @@ After we enter this command we will be asked: Are you sure you want to
 continue connecting (yes/no)?
 Type yes
 We are now connected to bandit14
+
+ssh bandit4@bandit.labs.overthewire.org -p 2220 <command>
+# After login the command will be run automatically
+
+      Pseudo Termina
+      -------------------
+   “Pseudo Terminal”: emulates terminal hardware, handling input and output, the same way a physical device would so that the software connected is unaware that it is not a real device attached.
+
+    To understand what is “Pseudo Terminal”, read https://renenyffenegger.ch/notes/development/misc/pseudo-terminal
+
+To create “Pseudo Terminal”, we would use -t option in our ssh command to force pseudo-tty allocation:
+
+     1. ssh bandit18@bandit.labs.overthewire.org -p 2220 -t /bin/sh 
+     2.  enter  password to login.
+
+Here /bin/sh, is the shell   used in our “Pseudo Terminal”.
+
+
+
