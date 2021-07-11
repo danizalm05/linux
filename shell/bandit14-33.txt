@@ -175,11 +175,49 @@ medium.com/@theGirlWhoEncrypts/overthewire-bandit-level-16-level-17-958bd0bfcbc4
  https://overthewire.org/wargames/bandit/bandit20.html
    ssh bandit19@bandit.labs.overthewire.org -p 2220
    pass:IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x 
-   
+   https://medium.com/@theGirlWhoEncrypts/overthewire-bandit-level-19-level-20-d6b15b5d803
    problem: To gain access to the next level, you should use the setuid binary in the homedirectory. 
             
              The password is in   (/etc/bandit_pass), after you have used the setuid binary.    
        
    solution  
    Write up   
-      1. 
+      1. ls -l 
+         output:  ...
+                 -rwsr-x---  1 bandit20 bandit19 7296 May  7  2020 bandit20-do
+                  ...
+         a. you can see the 's' in the permissions for the user instad of 'x'
+         b. Additionally, the owner of the file 'bandit20-do' is bandit20. 
+            The red highlight signifies that this file has elevated permissions. 
+            Hence, any 
+            commands executing with ./bandit20-do will run as user bandit20 instead 
+            of bandit19.
+         c. (Optional) Since the file bandit20-do is an executable, 
+             simply execute ./bandit20-do. The output the is following:
+             
+             "
+                 Run a command as another user.
+                 Example: ./bandit20-do id
+            "
+             
+y
+
+     2. Thus, run
+       ./bandit20-do cat /etc/bandit_pass/bandit20
+
+     output:  GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
+
+20  → 21
+ https://overthewire.org/wargames/bandit/bandit21.html
+   ssh bandit20@bandit.labs.overthewire.org -p 2220
+   pass: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+   problem:  
+   solution  
+   Write up 
+
+
+  
+
+
+
